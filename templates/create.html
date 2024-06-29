@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Create - Idea</title>
+</head>
+<body>
+        <h1>Formular</h1>
+        <form method="post" action="/create">
+                <label for="category">Kategorie:</label>
+                <select id="category" name="category">
+                    {% for item in items %}
+                        <option value="{{item}}">{{ item }}</option>
+                    {% endfor %}  
+                </select><br><br>
+
+                <label for="title">Überschrift:</label>
+                <input type="text" id="title" name="title"><br><br>
+
+                <label for="text">Text:</label>
+                <textarea id="text" name="text"></textarea><br><br>
+
+                <input type="submit" value="Absenden">
+        </form>
+</body>
+</html>
