@@ -5,7 +5,7 @@ conn = sqlite3.Connection(constants.DATABASE_NAME)
 
 category_table_sql = '''CREATE TABLE category(id INTEGER PRIMARY KEY AUTOINCREMENT, name VARCHAR(100) NOT NULL)'''
 
-idea_table_sql = '''CREATE TABLE ideas(id INTEGER PRIMARY KEY AUTOINCREMENT, heading TEXT NOT NULL,content TEXT, fcategory INTEGER REFERENCES category(id))''' 
+idea_table_sql = '''CREATE TABLE ideas(id INTEGER PRIMARY KEY AUTOINCREMENT, heading TEXT NOT NULL, content TEXT, fcategory INTEGER REFERENCES category(id))''' 
     
 
 def init():
