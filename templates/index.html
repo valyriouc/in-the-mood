@@ -7,5 +7,10 @@
 </head>
 <body>
     <h1>Hello in the mood</h1>
+    {% if context["message"] != None %} 
+        <div>
+            {{context["message"]}}
+        </div>
+    {% endif %}
 </body>
 </html>
