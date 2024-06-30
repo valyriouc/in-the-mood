@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search - Mood</title>
+</head>
+<body>
+    <main>
+        {% if context["message"] == None %}
+            {% for idea in context["ideas"] %}
+                <div>
+                    <h2>{{idea[1]}} - {{idea[3]}}</h2>
+                    <p>
+                        {{idea[2]}}
+                    </p>
+                </div>
+            {% endfor %}
+        {% else %}  
+            <h2>{{context["message"]}}</h2>
+        {% endif %}
+    </main>
+</body>
+</html>

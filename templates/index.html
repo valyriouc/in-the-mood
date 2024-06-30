@@ -12,5 +12,21 @@
             {{context["message"]}}
         </div>
     {% endif %}
+    <main>
+        <div id="search">
+            <form method="get" action="/search/">
+                <input type="input" value="search" name="search">
+                <input type="submit" value="submit">
+            </form>
+        </div>
+        {% for idea in context["ideas"] %}
+            <div>
+                <h2>{{idea[1]}} - {{idea[3]}}</h2>
+                <p>
+                    {{idea[2]}}
+                </p>
+            </div>
+        {% endfor %}
+    </main>
 </body>
 </html>
